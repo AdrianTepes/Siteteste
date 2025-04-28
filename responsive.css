@@ -1,0 +1,78 @@
+/* ================================== */
+/*            RESPONSIVIDADE         */
+/* ================================== */
+
+@media (max-width: 768px) {
+
+    /* Header e Menu */
+    .menu-toggle, .menu-icon {
+      display: block;
+      font-size: 30px;
+      color: #f1e9d2;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+    }
+  
+    nav .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #6e2f2f;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 1000;
+    }
+  
+    #menu-toggle:checked + .menu-icon + nav .menu {
+      display: flex;
+    }
+  
+    nav .menu li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav .menu li a {
+      padding: 15px;
+      border-top: 1px solid #8a3b3b;
+      display: block;
+    }
+  
+    .menu li:hover .submenu {
+      position: static;
+      background-color: #555;
+    }
+  
+    /* Containers principais */
+    .habilidades-container,
+    .artefatos-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .habilidade, 
+    .artefato {
+      width: 80%;
+      max-width: 300px;
+    }
+  
+    /* Ajustes para banners */
+    .banners {
+      height: 60vh;
+    }
+  
+    .banner {
+      height: 60vh;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .artefato {
+      width: 100%;
+    }
+  }
+  

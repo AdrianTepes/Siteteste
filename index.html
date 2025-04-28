@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova classe: Monk - Tibia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
@@ -22,16 +23,16 @@
     <nav>
       <ul class="menu">
         <li><a href="#inicio">Início</a></li>
-        <li>
-          <span class="menu-item-com-submenu">Habilidades</span>
+        <li class="has-submenu">
+          <span>Habilidades</span>
           <ul class="submenu">
             <li><a href="#habilidade1">Double Jab</a></li>
             <li><a href="#habilidade2">Restore Balance</a></li>
             <li><a href="#habilidade3">Sweeping Takedown</a></li>
           </ul>
         </li>
-        <li>
-          <span class="menu-item-com-submenu">Artefatos</span>
+        <li class="has-submenu">
+          <span>Artefatos</span>
           <ul class="submenu">
             <li><a href="#jo-staff">Jo Staff</a></li>
             <li><a href="#simple-jo-staff">Simple Jo Staff</a></li>
@@ -58,73 +59,73 @@
   <section id="inicio" class="apresentacao">
     <div class="apresentacao-container">
         <h2>Design de itens</h2>
-        <p>Criar uma nova vocação também trazia o desafio de criar novas classes de armas e armaduras, que muitas vezes precisavam ser integradas aos conjuntos existentes. Novos tipos de armas eram, por exemplo, nunchakus, garfos de sai, manoplas de garra, katars ou cajados de batalha. De simples armas de treinamento a itens animados de primeira linha nos conjuntos Sanguine ou Soul, a equipe de conteúdo tinha uma longa lista de desejos para atender. Muitos conjuntos de equipamentos dos últimos anos precisavam ser expandidos com armas de monge com elementos de design semelhantes.</p> <br>
+        <p>Criar uma nova vocação também trazia o desafio de criar novas classes de armas e armaduras, que muitas vezes precisavam ser integradas aos conjuntos existentes. Novos tipos de armas eram, por exemplo, nunchakus, garfos de sai, manoplas de garra, katars ou cajados de batalha. De simples armas de treinamento a itens animados de primeira linha nos conjuntos Sanguine ou Soul, a equipe de conteúdo tinha uma longa lista de desejos para atender. Muitos conjuntos de equipamentos dos últimos anos precisavam ser expandidos com armas de monge com elementos de design semelhantes.</p> 
 
         <p>Isso levantou questões como: como diferenciamos novos tipos de armas, como garfos sai ou katars, de adagas e espadas existentes? Neste caso, mudamos a orientação do item. Enquanto as espadas geralmente apontam para o canto superior esquerdo, os garfos sai e katars são posicionados do canto superior direito para o canto inferior esquerdo. Um novo recurso de empunhadura dupla também foi introduzido, e apontar para o canto inferior esquerdo parece a posição natural de segurar quando os sais e as luvas são espelhados nos espaços para as mãos das armas no inventário.</p>
 
         <img src="Imagens/items.png" alt="Design de itens">
     </div>
-</section>
+  </section>
 
-    <section id="habilidades">
-        <h2>Habilidades do Monge</h2>
-        <div class="habilidades-container">
-            <div class="habilidade" id="habilidade1">
-                <img src="Imagens/double_jab.gif" alt="Double Jab">
-                <h3><a href="https://www.tibiawiki.com.br/wiki/Double_Jab" class="h_titulos" target="_blank">Double Jab</a></h3>
-                <p><aside class="nota">Obtida no lvl 14.</aside></p>
-                <p>Causa dano a um inimigo único. <aside class="nota">Aumenta sua harmonia ao usar a magia</aside></p>
-            </div>
-            <div class="habilidade" id="habilidade2">
-                <img src="Imagens/restore_balance.gif" alt="Restore Balance">
-                <h3><a href="https://www.tibiawiki.com.br/wiki/Restore_Balance" class="h_titulos" target="_blank">Restore Balance</a></h3>
-                <p><aside class="nota">Obtida no lvl 18.</aside></p>
-                <p>Cura um aliado jogador alvo. <aside class="nota">Não pode ser usado em si mesmo</aside></p>
-            </div>
-            <div class="habilidade" id="habilidade3">
-                <img src="Imagens/sweeping_takedown.gif" alt="Sweeping Takedown">
-                <h3><a href="https://www.tibiawiki.com.br/wiki/Sweeping_Takedown" class="h_titulos" target="_blank">Sweeping Takedown</a></h3>
-                <p><aside class="nota">Obtida no lvl 60.</aside></p>
-                <p>Gasta toda a Harmonia para causar dano aos inimigos a frente e ao lado do monge, ataque em área que atinge até 14 Sqms. <aside class="nota">Perde a harmonia ao usar a magia.</aside></p>
-            </div>
-        </div>
-    </section>
+  <section id="habilidades">
+      <h2>Habilidades do Monge</h2>
+      <div class="habilidades-container">
+          <div class="habilidade" id="habilidade1">
+              <img src="Imagens/double_jab.gif" alt="Double Jab">
+              <h3><a href="https://www.tibiawiki.com.br/wiki/Double_Jab" class="h_titulos" target="_blank">Double Jab</a></h3>
+              <p><aside class="nota">Obtida no lvl 14.</aside></p>
+              <p>Causa dano a um inimigo único. <aside class="nota">Aumenta sua harmonia ao usar a magia</aside></p>
+          </div>
+          <div class="habilidade" id="habilidade2">
+              <img src="Imagens/restore_balance.gif" alt="Restore Balance">
+              <h3><a href="https://www.tibiawiki.com.br/wiki/Restore_Balance" class="h_titulos" target="_blank">Restore Balance</a></h3>
+              <p><aside class="nota">Obtida no lvl 18.</aside></p>
+              <p>Cura um aliado jogador alvo. <aside class="nota">Não pode ser usado em si mesmo</aside></p>
+          </div>
+          <div class="habilidade" id="habilidade3">
+              <img src="Imagens/sweeping_takedown.gif" alt="Sweeping Takedown">
+              <h3><a href="https://www.tibiawiki.com.br/wiki/Sweeping_Takedown" class="h_titulos" target="_blank">Sweeping Takedown</a></h3>
+              <p><aside class="nota">Obtida no lvl 60.</aside></p>
+              <p>Gasta toda a Harmonia para causar dano aos inimigos à frente e aos lados do monge, ataque em área que atinge até 14 Sqms. <aside class="nota">Perde a harmonia ao usar a magia.</aside></p>
+          </div>
+      </div>
+  </section>
 
-    <section id="artefatos">
-        <h2>Artefatos</h2>
-        <div class="artefatos-container">
-            <div class="artefato" id="jo-staff">
-                <img src="Imagens/Jo_Staff.gif" alt="Jo Staff">
-                <h3><a href="https://www.tibiawiki.com.br/wiki/Jo_Staff" class="Dano_Energy" target="_blank">Jo Staff</a></h3>
-                <p>Arma usada após sair de Dawnport, pode ser considerada a primeira arma "de verdade". Causa dano de Energy</p>
-            </div>
-            <div class="artefato" id="simple-jo-staff">
-                <img src="Imagens/Simple_Jo_Staff.gif" alt="Simple Jo Staff">
-                <h3><a href="https://www.tibiawiki.com.br/wiki/Simple_Jo_Staff" class="Dano_Earth" target="_blank">Simple Jo Staff</a></h3>
-                <p>Alternativa ao Jo Staff, porém deve ser dropada dos inimigos <a href="https://www.tibiawiki.com.br/wiki/Emerald_Damselfly" class="Link_Externo" target="_blank">Emerald Damselfly</a> ou o <a href="https://www.tibiawiki.com.br/wiki/Dawnfly" class="Link_Externo" target="_blank">Dawnfly</a>. Causa dano de Earth.</p>
-            </div>
-            <div class="artefato" id="pair-monk-fists">
-                <img src="Imagens/Pair_of_Monk_Fists.gif" alt="Pair of Monk Fists">
-                <h3><a href="https://www.tibiawiki.com.br/wiki/Pair_of_Monk_Fists" class="Dano_Physical" target="_blank">Pair of Monk Fists</a></h3>
-                <p>Podemos usar nossa primeira arma que causa dano Physical a partir do lvl 10. Ela pode ser comprada de qualquer NPC vendedor de armas das cidades</p>
-            </div>
-        </div>
-    </section>
+  <section id="artefatos">
+      <h2>Artefatos</h2>
+      <div class="artefatos-container">
+          <div class="artefato" id="jo-staff">
+              <img src="Imagens/Jo_Staff.gif" alt="Jo Staff">
+              <h3><a href="https://www.tibiawiki.com.br/wiki/Jo_Staff" class="Dano_Energy" target="_blank">Jo Staff</a></h3>
+              <p>Arma usada após sair de Dawnport, pode ser considerada a primeira arma "de verdade". Causa dano de Energy.</p>
+          </div>
+          <div class="artefato" id="simple-jo-staff">
+              <img src="Imagens/Simple_Jo_Staff.gif" alt="Simple Jo Staff">
+              <h3><a href="https://www.tibiawiki.com.br/wiki/Simple_Jo_Staff" class="Dano_Earth" target="_blank">Simple Jo Staff</a></h3>
+              <p>Alternativa ao Jo Staff, dropada dos inimigos <a href="https://www.tibiawiki.com.br/wiki/Emerald_Damselfly" class="Link_Externo" target="_blank">Emerald Damselfly</a> ou <a href="https://www.tibiawiki.com.br/wiki/Dawnfly" class="Link_Externo" target="_blank">Dawnfly</a>. Causa dano de Earth.</p>
+          </div>
+          <div class="artefato" id="pair-monk-fists">
+              <img src="Imagens/Pair_of_Monk_Fists.gif" alt="Pair of Monk Fists">
+              <h3><a href="https://www.tibiawiki.com.br/wiki/Pair_of_Monk_Fists" class="Dano_Physical" target="_blank">Pair of Monk Fists</a></h3>
+              <p>Primeira arma que causa dano Physical, disponível a partir do lvl 10. Pode ser comprada de NPCs vendedores de armas nas cidades.</p>
+          </div>
+      </div>
+  </section>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Este é um projeto sem fins lucrativos</p>
-    </section>
+  <section id="contato">
+      <h2>Contato</h2>
+      <p>Este é um projeto sem fins lucrativos.</p>
+  </section>
 </main>
 
 <footer>
   <div class="footer-links">
-      <a href="#inicio">Inicio</a>
+      <a href="#inicio">Início</a>
       <a href="#habilidades">Habilidades</a>
       <a href="#artefatos">Artefatos</a>
       <a href="#contato">Contato</a>
   </div>
-  <p>Imagens pertencem à CipSoft GmbH – uso educativo</p>
+  <p>Imagens pertencem à CipSoft GmbH – uso educativo.</p>
 </footer>
 
 </body>

@@ -1,3 +1,7 @@
+/* =============================== */
+/* Reset e Configurações Globais */
+/* =============================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +15,10 @@ body {
   scroll-behavior: smooth;
 }
 
+/* =============================== */
+/* Header e Top Header */
+/* =============================== */
+
 header {
   background-color: #6e2f2f;
   padding: 20px;
@@ -18,6 +26,7 @@ header {
   position: relative;
   z-index: 10;
 }
+
 .top-header {
   background-color: #1c120a;
   padding: 5px 20px;
@@ -29,6 +38,10 @@ header {
 .top-header .contatos span {
   margin: 0 10px;
 }
+
+/* =============================== */
+/* Footer */
+/* =============================== */
 
 footer {
   background-color: #1c120a;
@@ -52,14 +65,14 @@ footer {
   color: #caa75c;
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
+/* =============================== */
+/* Navegação / Menu / Submenu */
+/* =============================== */
 
 nav {
   padding: 10px;
+  position: relative;
+  z-index: 20;
 }
 
 .menu {
@@ -67,6 +80,8 @@ nav {
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .menu a {
@@ -81,65 +96,84 @@ nav {
   color: #caa75c;
 }
 
+li {
+  position: relative;
+}
+
 .submenu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #444;
+  font-weight: bold;
   min-width: 180px;
   padding: 10px 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .submenu li {
   padding: 5px 10px;
 }
 
-li {
-  position: relative;
-}
-
 li:hover > .submenu {
   display: block;
 }
 
+.menu-item-com-submenu {
+  color: #f1e9d2;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-item-com-submenu:hover {
+  color: #caa75c;
+  background-color: transparent; 
+}
+
+.menu-toggle, #menu-toggle, .menu-icon {
+  display: none;
+}
+
+/* =============================== */
+/* Banners */
+/* =============================== */
+
 .banners {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 690px;
   position: relative;
   overflow: hidden;
 }
 
 .banner {
   width: 100%;
-  height: 70%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-  animation: fade 16s infinite;
-}
-
-.banner .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fade 16s infinite;
 }
 
 .banner.sem-texto {
   animation: fade 16s infinite 8s;
   opacity: 0;
+}
+
+.banner .overlay {
+  background-color: rgba(0, 0, 0, 0.253);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
 }
 
 @keyframes fade {
@@ -154,10 +188,14 @@ li:hover > .submenu {
   }
 }
 
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
+/* =============================== */
+/* Seções Gerais */
+/* =============================== */
+
+main, section {
+  max-width: 960px;
   margin: 0 auto;
+  padding: 60px 20px;
 }
 
 section img {
@@ -165,6 +203,10 @@ section img {
   height: auto;
   border-radius: 12px;
 }
+
+/* =============================== */
+/* Apresentação do Monk */
+/* =============================== */
 
 .apresentacao-container {
   background-color: #6e2f2f;
@@ -184,6 +226,10 @@ section img {
   margin-bottom: 20px;
   color: #d8c78d;
 }
+
+/* =============================== */
+/* Habilidades */
+/* =============================== */
 
 .habilidades-container {
   display: flex;
@@ -216,9 +262,7 @@ section img {
 .h_titulos {
   color: #f5ba0a;
   font-weight: bold;
-
 }
-
 
 .habilidade p {
   font-size: 1.2rem;
@@ -230,6 +274,11 @@ section img {
   font-size: 14px;
   color: #d8c78d;
 }
+
+/* =============================== */
+/* Armas Iniciais (Artefatos) */
+/* =============================== */
+
 .artefatos-container {
   display: flex;
   flex-wrap: wrap;
@@ -239,8 +288,8 @@ section img {
 }
 
 .artefato {
-  width: 30%; 
-  background-color: #3b2918; 
+  width: 30%;
+  background-color: #3b2918;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -259,13 +308,6 @@ section img {
   transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
-  .artefato {
-    width: 100%; 
-    max-width: 300px; 
-  }
-}
-
 .artefato h3 {
   margin-bottom: 10px;
   font-size: 1.8rem;
@@ -277,217 +319,51 @@ section img {
   margin-bottom: 15px;
 }
 
-.Dano_Energy {
-  color: #DA70D6;
+/* =============================== */
+/* Links Especiais */
+/* =============================== */
+
+.Dano_Energy, .Dano_Earth, .Dano_Physical, .Link_Externo {
   text-decoration: none;
   font-weight: bold;
 }
 
+.Dano_Energy {
+  color: #DA70D6;
+}
 .Dano_Energy:hover {
   color: #8A2BE2;
 }
 
 .Dano_Earth {
   color: #32CD32;
-  text-decoration: none;
-  font-weight: bold;
 }
-
 .Dano_Earth:hover {
   color: #006400;
 }
 
 .Dano_Physical {
   color: #A9A9A9;
-  text-decoration: none;
-  font-weight: bold;
 }
-
 .Dano_Physical:hover {
   color: #808080;
 }
 
 .Link_Externo {
   color: #FFD700;
-  text-decoration: none;
-  font-weight: bold;
 }
-
 .Link_Externo:hover {
   color: #FF6347;
 }
 
-/* --- Correções do submenu para One Page --- */
+/* =============================== */
+/* Ajustes de Navegação para One Page */
+/* =============================== */
+
 header nav ul.menu li a:focus {
   outline: none;
 }
 
 header nav ul.menu li a:active {
   background-color: inherit;
-}
-
-/* Responsividade: para dispositivos móveis */
-@media (max-width: 768px) {
-  nav .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .habilidades-container,
-  .artefatos-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .habilidade, .artefato {
-    width: 80%;
-  }
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: #f1e9d2;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-#menu-toggle:checked + ul {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #6e2f2f;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-  }
-
-  nav .menu li {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav .menu li a {
-    padding: 15px;
-    border-top: 1px solid #8a3b3b;
-  }
-
-  nav .menu li:hover .submenu {
-    position: static;
-  }
-}
-
-/* Daqui pra baixo foram somente lagrimas, nada funciona nessa merda
-
-/* Controle do menu mobile */
-#menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  color: #f1e9d2;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-}
-
-nav {
-  position: relative;
-  z-index: 20;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.menu li {
-  position: relative;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #444;
-  min-width: 180px;
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-.menu li:hover .submenu {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #6e2f2f;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-  }
-
-  #menu-toggle:checked + .menu-icon + nav .menu {
-    display: flex;
-  }
-
-  .menu li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .menu li a {
-    padding: 15px;
-    display: block;
-    border-top: 1px solid #8a3b3b;
-  }
-
-  /* Deixar o submenu visível no mobile */
-  .menu li:hover .submenu {
-    position: static;
-    background-color: #555;
-  }
-}
-
-.menu-item {
-  position: relative;
-}
-
-.menu-item-com-submenu {
-  color: white;
-  padding: 10px 20px;
-  display: block;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.menu-item-com-submenu:hover {
-  background-color: #555;
-  color: #caa75c;
 }
