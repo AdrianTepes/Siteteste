@@ -6,37 +6,54 @@
     <title>Nova classe: Monk - Tibia</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <Header>
-    <h1>Monk: A nova classe do Tibia</h1>
-    <nav class="menu" >
-        <a href="#inicio">Inicio</a>
-        <a href="#lore">Lore</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#artefatos">Artefatos</a>
-        <a href="#contato">Contato</a>
-    </nav>
-   </Header>
 
-   <section class="banner">
-    <div class="overlay">
-      <h1>Monge</h1>
-      <p>Harmonia, Poder e Equilíbrio</p>
+<body>
+
+   <header>
+    <h1>Monk: A nova classe do Tibia</h1>
+    <nav class="menu">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#lore">Lore</a></li>
+            <li class="has-submenu">
+                <a href="#habilidades">Habilidades</a>
+                <ul class="submenu">
+                    <li><a href="#habilidade1">Double Jab</a></li>
+                    <li><a href="#habilidade2">Restore Balance</a></li>
+                    <li><a href="#habilidade3">Sweeping Takedown</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#artefatos">Artefatos</a>
+                <ul class="submenu">
+                    <li><a href="#jo-staff">Jo Staff</a></li>
+                    <li><a href="#simple-jo-staff">Simple Jo Staff</a></li>
+                    <li><a href="#pair-monk-fists">Pair of Monk Fists</a></li>
+                </ul>
+            </li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+   </header>
+
+   <section class="banners">
+    <div class="banner" style="background-image: url('Imagens/Background_game.jpg');">
+      <div class="overlay">
+        <h1>Monge</h1>
+        <p>Harmonia, Poder e Equilíbrio</p>
+      </div>
     </div>
+
+    <div class="banner sem-texto" style="background-image: url('Imagens/mysterymonknighy.jpg');"></div>
   </section>
 
-   <Main>
+   <main>
     <section id="Inicio">
         <h2>Apresentação do Monk</h2>
         <p>A nova classe espiritual do Tibia</p>
-        <img src="Imagens/mosaic.png" alt="Aprensentação do Monk">
+        <img src="Imagens/mosaic.png" alt="Apresentação do Monk">
     </section>
 
-    <section id="Lore">
-        <h2>Lore</h2>
-        <p>A historia por tras do Monk</p>
-    </section>
- 
     <section id="Habilidades">
         <h2>Habilidades do Monge</h2>
         <div class="habilidades-container">
@@ -60,7 +77,6 @@
           </div>
         </div>
       </section>
-    
 
     <section id="Artefatos">
         <h2>Artefatos</h2>
@@ -82,19 +98,16 @@
           </div>
         </div>
       </section>
-      
 
     <section id="Contato">
         <h2>Contato</h2>
         <p>Este é um projeto sem fins lucrativos</p>
     </section>
-   </Main>
+   </main>
 
-   <Footer>
+   <footer>
     <p>Imagens pertencem à CipSoft GmbH – uso educativo</p>
-   </Footer>
-
-
+   </footer>
 
 </body>
 </html>
