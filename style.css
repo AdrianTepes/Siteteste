@@ -1,55 +1,87 @@
-*
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-background-color: #2e1f14;
-color: #f1e9d2;
-font-family: Georgia, serif;
-scroll-behavior: smooth;
+  background-color: #2e1f14;
+  color: #f1e9d2;
+  font-family: Georgia, serif;
+  scroll-behavior: smooth;
 }
 
 header {
-background-color: #6e2f2f;
-padding: 20px;
-text-align: center;
+  background-color: #6e2f2f;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.top-header {
+  background-color: #1c120a;
+  padding: 5px 20px;
+  font-size: 14px;
+  color: #f1e9d2;
+  text-align: center;
+}
+
+.top-header .contatos span {
+  margin: 0 10px;
 }
 
 footer {
   background-color: #1c120a;
-  text-align: center;
   padding: 20px;
+  text-align: center;
   font-size: 14px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #f1e9d2;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #caa75c;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
 nav {
   padding: 10px;
 }
 
-nav .menu ul {
+.menu {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-nav .menu li {
-  position: relative;
-}
-
-nav .menu a {
-  color: white;
+.menu a {
+  color: #f1e9d2;
   text-decoration: none;
   padding: 10px 20px;
   display: block;
+  font-weight: bold;
 }
 
-nav .submenu {
+.menu a:hover {
+  color: #caa75c;
+}
+
+.submenu {
   display: none;
   position: absolute;
   top: 100%;
@@ -57,42 +89,19 @@ nav .submenu {
   background-color: #444;
   min-width: 180px;
   padding: 10px 0;
-  z-index: 100;
+  z-index: 10;
 }
 
-nav .submenu li {
+.submenu li {
   padding: 5px 10px;
 }
 
-nav .has-submenu:hover .submenu {
+li {
+  position: relative;
+}
+
+li:hover > .submenu {
   display: block;
-}
-
-nav a:hover {
-  background-color: #555;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  nav .menu ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  nav .menu a {
-    padding: 15px;
-  }
-  
-  nav .submenu {
-    position: static;
-    background-color: #555;
-    display: none;
-    width: 100%;
-  }
-  
-  nav .has-submenu:hover .submenu {
-    display: block;
-  }
 }
 
 .banners {
@@ -107,7 +116,8 @@ nav a:hover {
   height: 70%;
   background-size: cover;
   background-position: center;
-  position: absolute;
+  position: relative;
+  z-index: 1;
   animation: fade 16s infinite;
 }
 
@@ -128,8 +138,8 @@ nav a:hover {
 }
 
 .banner.sem-texto {
-  animation: fade 16s infinite 8s; 
-  opacity: 0; 
+  animation: fade 16s infinite 8s;
+  opacity: 0;
 }
 
 @keyframes fade {
@@ -144,16 +154,6 @@ nav a:hover {
   }
 }
 
-.menu a {
-  color: #f1e9d2;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.menu a:hover {
-  color: #caa75c;
-}
-
 section {
   padding: 60px 20px;
   max-width: 1000px;
@@ -164,6 +164,25 @@ section img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+.apresentacao-container {
+  background-color: #6e2f2f;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.apresentacao-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.apresentacao-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #d8c78d;
 }
 
 .habilidades-container {
@@ -194,48 +213,57 @@ section img {
   font-size: 1.8rem;
 }
 
+.h_titulos {
+  color: #f5ba0a;
+  font-weight: bold;
+
+}
+
+
 .habilidade p {
   font-size: 1.2rem;
   color: #f1e9d2;
+  margin-bottom: 15px;
 }
 
 .nota {
-  font-size: 14px;  
-  color: #d8c78d; 
+  font-size: 14px;
+  color: #d8c78d;
 }
-
-.habilidade p, .artefato p {
-  margin-bottom: 15px;  
-}
-
 .artefatos-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 40px;
   margin-top: 30px;
 }
 
 .artefato {
-  background-color: #3b2c1e;
+  width: 30%; 
+  background-color: #3b2918; 
   padding: 20px;
-  border-radius: 12px;
-  width: 30%;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
-}
-
-.artefato:hover {
-  transform: translateY(-5px);
-  background-color: #4e3927;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
 }
 
 .artefato img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.artefato:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .artefato {
+    width: 100%; 
+    max-width: 300px; 
+  }
 }
 
 .artefato h3 {
@@ -246,44 +274,220 @@ section img {
 .artefato p {
   font-size: 1.2rem;
   color: #f1e9d2;
+  margin-bottom: 15px;
 }
 
 .Dano_Energy {
-  color: #DA70D6; 
-  text-decoration: none; 
-  font-weight: bold;  
+  color: #DA70D6;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .Dano_Energy:hover {
-  color: #8A2BE2; 
+  color: #8A2BE2;
 }
 
 .Dano_Earth {
-  color: #32CD32; 
-  text-decoration: none; 
-  font-weight: bold;  
-}
-
-.Dano_Physical {
-  color: #A9A9A9;  
-  text-decoration: none;  
-  font-weight: bold;  
-}
-
-.Dano_Physical:hover {
-  color: #808080
+  color: #32CD32;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .Dano_Earth:hover {
-  color: #006400; 
+  color: #006400;
+}
+
+.Dano_Physical {
+  color: #A9A9A9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Dano_Physical:hover {
+  color: #808080;
 }
 
 .Link_Externo {
-  color: #FFD700; 
+  color: #FFD700;
   text-decoration: none;
   font-weight: bold;
 }
 
 .Link_Externo:hover {
-  color: #FF6347; 
+  color: #FF6347;
+}
+
+/* --- Correções do submenu para One Page --- */
+header nav ul.menu li a:focus {
+  outline: none;
+}
+
+header nav ul.menu li a:active {
+  background-color: inherit;
+}
+
+/* Responsividade: para dispositivos móveis */
+@media (max-width: 768px) {
+  nav .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .habilidades-container,
+  .artefatos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .habilidade, .artefato {
+    width: 80%;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #f1e9d2;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#menu-toggle:checked + ul {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #6e2f2f;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  nav .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .menu li a {
+    padding: 15px;
+    border-top: 1px solid #8a3b3b;
+  }
+
+  nav .menu li:hover .submenu {
+    position: static;
+  }
+}
+
+/* Daqui pra baixo foram somente lagrimas, nada funciona nessa merda
+
+/* Controle do menu mobile */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #f1e9d2;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+nav {
+  position: relative;
+  z-index: 20;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu li {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  min-width: 180px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #6e2f2f;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav .menu {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li a {
+    padding: 15px;
+    display: block;
+    border-top: 1px solid #8a3b3b;
+  }
+
+  /* Deixar o submenu visível no mobile */
+  .menu li:hover .submenu {
+    position: static;
+    background-color: #555;
+  }
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item-com-submenu {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-item-com-submenu:hover {
+  background-color: #555;
+  color: #caa75c;
 }
